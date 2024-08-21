@@ -51,6 +51,30 @@ class RootViewController: UIViewController {
 
     title = "Root"
     view.backgroundColor = UIColor.white
+
+    let gameButton = UIButton(frame: .zero)
+    gameButton.setTitle("Game", for: .normal)
+    gameButton.setTitleColor(.black, for: .normal)
+    gameButton.addAction(.init { [weak self] _ in
+      self?.store.send(.gameButtonTapped)
+    }, for: .touchUpInside)
+    view.addSubview(gameButton)
+    gameButton.snp.makeConstraints { make in
+      make.centerX.equalTo(view)
+      make.centerY.equalTo(view).multipliedBy(0.5)
+    }
+
+    let settingsButton = UIButton(frame: .zero)
+    settingsButton.setTitle("Settings", for: .normal)
+    settingsButton.setTitleColor(.black, for: .normal)
+    settingsButton.addAction(.init { [weak self] _ in
+      self?.store.send(.settingsButtonTapped)
+    }, for: .touchUpInside)
+    view.addSubview(settingsButton)
+    settingsButton.snp.makeConstraints { make in
+      make.centerX.equalTo(view)
+      make.centerY.equalTo(view).multipliedBy(1.5)
+    }
   }
 }
 
@@ -72,6 +96,16 @@ class GameViewController: UIViewController {
 
     title = "Game"
     view.backgroundColor = UIColor.systemOrange
+
+    let button = UIButton(frame: .zero)
+    button.setTitle("Game Button", for: .normal)
+    button.addAction(.init { [weak self] _ in
+      self?.store.send(.gameButtonTapped)
+    }, for: .touchUpInside)
+    view.addSubview(button)
+    button.snp.makeConstraints { make in
+      make.center.equalTo(view)
+    }
   }
 }
 
@@ -92,6 +126,16 @@ class SettingsViewController: UIViewController {
 
     title = "Settings"
     view.backgroundColor = UIColor.systemBlue
+
+    let button = UIButton(frame: .zero)
+    button.setTitle("Is On Button", for: .normal)
+    button.addAction(.init { [weak self] _ in
+      self?.store.send(.isOnButtonTapped)
+    }, for: .touchUpInside)
+    view.addSubview(button)
+    button.snp.makeConstraints { make in
+      make.center.equalTo(view)
+    }
   }
 }
 

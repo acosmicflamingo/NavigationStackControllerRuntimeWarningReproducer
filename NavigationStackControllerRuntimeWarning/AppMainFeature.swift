@@ -25,9 +25,23 @@ struct AppMain {
     }
     Reduce<State, Action> { state, action in
       switch action {
-      case .root:
+      case .root(.gameButtonTapped):
+        state.path.append(.game(.init()))
         return .none
-        
+
+      case .root(.settingsButtonTapped):
+        state.path.append(.settings(.init()))
+        return .none
+
+      case .path(.element(id: _, action: .game(.gameButtonTapped))):
+        return .none
+
+      case .path(.element(id: _, action: .settings(.isOnButtonTapped))):
+        state.path = .init([
+          .game(.init())
+        ])
+        return .none
+
       case .path:
         return .none
       }
