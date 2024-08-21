@@ -14,7 +14,7 @@
 		08A4400A2C75887500DD965F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 08A440092C75887500DD965F /* Base */; };
 		08A440132C75890400DD965F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 08A440122C75890400DD965F /* ComposableArchitecture */; };
 		08A440162C75891400DD965F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08A440152C75891400DD965F /* SnapKit */; };
-		08A440202C758B5E00DD965F /* AppMainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4401F2C758B5E00DD965F /* AppMainFeature.swift */; };
+		08A440202C758B5E00DD965F /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4401F2C758B5E00DD965F /* Reducers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		08A440062C75887500DD965F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08A440092C75887500DD965F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08A4400B2C75887500DD965F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08A4401F2C758B5E00DD965F /* AppMainFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainFeature.swift; sourceTree = "<group>"; };
+		08A4401F2C758B5E00DD965F /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				08A43FFD2C75887300DD965F /* AppDelegate.swift */,
 				08A43FFF2C75887300DD965F /* SceneDelegate.swift */,
 				08A440012C75887300DD965F /* ViewControllers.swift */,
-				08A4401F2C758B5E00DD965F /* AppMainFeature.swift */,
+				08A4401F2C758B5E00DD965F /* Reducers.swift */,
 				08A440062C75887500DD965F /* Assets.xcassets */,
 				08A440082C75887500DD965F /* LaunchScreen.storyboard */,
 				08A4400B2C75887500DD965F /* Info.plist */,
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A440202C758B5E00DD965F /* AppMainFeature.swift in Sources */,
+				08A440202C758B5E00DD965F /* Reducers.swift in Sources */,
 				08A440022C75887300DD965F /* ViewControllers.swift in Sources */,
 				08A43FFE2C75887300DD965F /* AppDelegate.swift in Sources */,
 				08A440002C75887300DD965F /* SceneDelegate.swift in Sources */,
